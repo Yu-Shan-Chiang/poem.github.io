@@ -1,0 +1,319 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&display=swap");
+* {
+  font-family: "Noto Serif TC", serif;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.background {
+  width: 100%;
+  height: 100%;
+  border-radius: 0px;
+  position: absolute;
+  top: initial;
+  left: initial;
+  z-index: -1;
+  background: linear-gradient(#151515, #1D2B49, #bad7ef, #f1f2ea);
+  background-size: 100% 200%;
+  background-position: 0 0;
+}
+
+.scene {
+  width: 100%;
+  height: 100%;
+  border-radius: 0px;
+  cursor: pointer;
+}
+.scene .wrap {
+  width: 900px;
+  height: 600px;
+  border-radius: 0px;
+  margin: 0px auto;
+  text-align: center;
+  position: relaitve;
+  text-align: left;
+  padding-top: 10%;
+}
+.scene .leftText {
+  display: inline-block;
+  vertical-align: top;
+  color: #ddd;
+}
+.scene .leftText p {
+  display: inline-block;
+  vertical-align: top;
+  width: 320px;
+  font-weight: 200;
+  font-size: 16px;
+  line-height: 30px;
+}
+
+.dayText {
+  display: none;
+}
+
+.building {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 60px;
+  margin-left: 0px;
+}
+.building .window {
+  width: 180px;
+  height: 240px;
+  border-radius: 50% 50% 0 0;
+  background: linear-gradient(#ddd, #ccc, #efe683);
+  box-shadow: 0px 0px 24px #efe683;
+}
+
+.sun, .moon {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: absolute;
+  top: initial;
+  left: initial;
+}
+
+.sun {
+  opacity: 0;
+  background-color: #ffdd38;
+  box-shadow: 0px 0px 16px #ffdd38;
+  top: 340px;
+  right: 440px;
+}
+
+.moon {
+  top: 120px;
+  right: 220px;
+  background-color: transparent;
+  box-shadow: inset 16px -16px #ddd;
+}
+
+h1, span, .moon, .sun, .scene, .allstars, .background, .dayText, .nightText, .window {
+  transition: 2s;
+}
+
+input:checked + .scene .background {
+  background-position: 0 100%;
+}
+input:checked + .scene .nightText {
+  display: none;
+}
+input:checked + .scene .dayText {
+  display: block;
+}
+input:checked + .scene .allstars {
+  opacity: 0;
+}
+input:checked + .scene h1, input:checked + .scene p, input:checked + .scene span {
+  color: #333;
+}
+input:checked + .scene span, input:checked + .scene p {
+  font-weight: 400;
+}
+input:checked + .scene .moon {
+  top: -100px;
+  right: 0px;
+  opacity: 0;
+}
+input:checked + .scene .sun {
+  top: 120px;
+  right: 220px;
+  opacity: 1;
+}
+input:checked + .scene .window {
+  background: linear-gradient(#5C708C, #151515);
+  box-shadow: 0px 0px 0px;
+}
+
+input {
+  display: none;
+}
+
+.allstars {
+  width: 100%;
+  height: 100%;
+  border-radius: 0px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.allstars [class^=star] {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background-color: #ddd;
+  animation: falling 2s infinite;
+}
+.allstars .star1 {
+  position: absolute;
+  top: 12%;
+  left: 51%;
+  animation-delay: -0.1s;
+}
+.allstars .star2 {
+  position: absolute;
+  top: -30%;
+  left: 46%;
+  animation-delay: -0.2s;
+}
+.allstars .star3 {
+  position: absolute;
+  top: 1%;
+  left: 79%;
+  animation-delay: -0.3s;
+}
+.allstars .star4 {
+  position: absolute;
+  top: -20%;
+  left: 88%;
+  animation-delay: -0.4s;
+}
+.allstars .star5 {
+  position: absolute;
+  top: 28%;
+  left: 37%;
+  animation-delay: -0.5s;
+}
+.allstars .star6 {
+  position: absolute;
+  top: 28%;
+  left: 36%;
+  animation-delay: -0.6s;
+}
+.allstars .star7 {
+  position: absolute;
+  top: 17%;
+  left: 21%;
+  animation-delay: -0.7s;
+}
+.allstars .star8 {
+  position: absolute;
+  top: -9%;
+  left: 56%;
+  animation-delay: -0.8s;
+}
+.allstars .star9 {
+  position: absolute;
+  top: 17%;
+  left: 100%;
+  animation-delay: -0.9s;
+}
+.allstars .star10 {
+  position: absolute;
+  top: 0%;
+  left: 93%;
+  animation-delay: -1s;
+}
+.allstars .star11 {
+  position: absolute;
+  top: -17%;
+  left: 55%;
+  animation-delay: -1.1s;
+}
+.allstars .star12 {
+  position: absolute;
+  top: 2%;
+  left: 80%;
+  animation-delay: -1.2s;
+}
+.allstars .star13 {
+  position: absolute;
+  top: 7%;
+  left: 6%;
+  animation-delay: -1.3s;
+}
+.allstars .star14 {
+  position: absolute;
+  top: 13%;
+  left: 7%;
+  animation-delay: -1.4s;
+}
+.allstars .star15 {
+  position: absolute;
+  top: 5%;
+  left: 48%;
+  animation-delay: -1.5s;
+}
+.allstars .star16 {
+  position: absolute;
+  top: -28%;
+  left: 96%;
+  animation-delay: -1.6s;
+}
+
+@keyframes falling {
+  0%, 100% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
+  }
+  0% {
+    transform: translate(100px, 0px);
+  }
+  100% {
+    transform: translate(0px, 200px);
+  }
+}
+.wave {
+  overflow: hidden;
+  position: absolute;
+  top: initial;
+  left: initial;
+  width: 100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+  height: 240px;
+}
+.wave .bg-wave {
+  background-image: url("https://i.imgur.com/parFQKq.png");
+  position: absolute;
+  top: initial;
+  left: initial;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  background-repeat: repeat;
+  background-position: left bottom;
+  transform-origin: left bottom;
+  background-size: 50% 360px;
+}
+.wave .wave1 {
+  animation: wave-reverse 12s linear infinite;
+  right: 0;
+  left: auto;
+}
+.wave .wave2 {
+  animation: wave 9s linear infinite;
+}
+
+@keyframes wave {
+  0% {
+    transform: translateX(0) scaleY(1);
+  }
+  50% {
+    transform: translateX(-25%) scaleY(0.75);
+  }
+  100% {
+    transform: translateX(-50%) scaleY(1);
+  }
+}
+@keyframes wave-reverse {
+  0% {
+    transform: translateX(0) scaleY(1);
+  }
+  50% {
+    transform: translateX(25%) scaleY(0.55);
+  }
+  100% {
+    transform: translateX(50%) scaleY(1);
+  }
+}
